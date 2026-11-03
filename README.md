@@ -57,4 +57,4 @@ O layout adapta o menu, as colunas e o espaçamento para telas de celular, table
 
 ## Publicar atualizações
 
-Depois de editar, salve os arquivos, teste no Live Server e envie suas alterações à branch `main` pelo Git. O repositório é privado; convide colaboradores nas configurações de acesso do GitHub.
+Depois de editar, salve os arquivos, teste no Live Server e envie suas alterações à branch `main` pelo Git. O repositório e o site publicado são públicos; qualquer pessoa pode consultar e clonar os arquivos.
