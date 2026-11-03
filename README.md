@@ -29,6 +29,4 @@ Para recarregar a página automaticamente durante a edição, instale a extensã
 - Para trocar a logo, substitua `images/logo.jpeg` mantendo o nome, ou altere o caminho nas páginas HTML.
 - `projetos.html` e `projeto-detalhe.html` são modelos: substitua nomes e textos de exemplo pelas informações oficiais fornecidas pelo NEPP.
 
-## Publicação e acesso
 
-O repositório no GitHub é privado. Convide colaboradores nas configurações de acesso do repositório para que possam visualizar ou editar os arquivos. O GitHub Pages não publica sites a partir de repositórios privados em todos os planos; para manter o acesso restrito, use o próprio repositório para compartilhar o código.
