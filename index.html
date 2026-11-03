@@ -1,70 +1,243 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Conheça o NEPP do IFRN Campus Apodi, seus projetos e sua equipe.">
-    <title>NEPP - IFRN Campus Apodi</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="NEPP - Núcleo de Extensão e Prática Profissional do Campus Apodi do IFRN."
+    />
+    <title>NEPP | IFRN Campus Apodi</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="topbar">
+      <div class="container topbar-inner">
+        <span>Portal do IFRN</span>
+        <div class="topbar-links">
+          <a href="index.html">Início</a>
+          <a href="projetos.html">Projetos</a>
+          <a href="#team">Equipe</a>
+          <a href="#contact">Contato</a>
+        </div>
+      </div>
+    </div>
+
     <header class="site-header">
-        <a class="brand" href="#home" aria-label="NEPP - IFRN Campus Apodi, início">
-            <img src="logo.jpeg" alt="Logo NEPP IFRN Apodi">
-            <span>NEPP - IFRN Campus Apodi</span>
+      <div class="container header-inner">
+        <a class="brand" href="index.html" aria-label="NEPP - início">
+          <img src="logo.jpeg" alt="Logo do NEPP" />
+          <div>
+            <strong>NEPP</strong>
+            <span>Campus Apodi</span>
+          </div>
         </a>
-        <nav aria-label="Navegação principal">
-            <a href="#home">Início</a>
-            <a href="#projects">Projetos</a>
-            <a href="#team">Equipe</a>
-            <a href="#contact">Contato</a>
+
+        <nav class="main-nav" aria-label="Navegação principal">
+          <a href="index.html">Início</a>
+          <a href="#about">Sobre</a>
+          <a href="projetos.html">Projetos</a>
+          <a href="#nuclei">Núcleos</a>
+          <a href="#team">Equipe</a>
+          <a href="#contact">Contato</a>
         </nav>
+      </div>
     </header>
 
     <main>
-        <section class="hero" id="home" aria-labelledby="hero-title">
-            <p class="eyebrow">Núcleo de Extensão e Prática Profissional</p>
-            <h1 id="hero-title">Conhecimento que se conecta com a comunidade.</h1>
-            <p>Conheça o NEPP do IFRN Campus Apodi e acompanhe projetos que aproximam formação, extensão e prática profissional.</p>
-            <a class="hero-button" href="#projects">Conheça os Projetos</a>
-        </section>
-
-        <section class="project-section" id="projects" aria-labelledby="projects-title">
-            <h2 id="projects-title">Projetos em destaque</h2>
-            <p class="section-intro">Conheça algumas das iniciativas vinculadas ao NEPP. As informações dos projetos serão atualizadas após validação com o núcleo.</p>
-            <div class="project-grid">
-                <article class="card">
-                    <p class="card-label">Projeto 01</p>
-                    <h3>Nome do projeto</h3>
-                    <p>Espaço para uma breve apresentação do projeto, seus objetivos e público atendido.</p>
-                </article>
-                <article class="card">
-                    <p class="card-label">Projeto 02</p>
-                    <h3>Nome do projeto</h3>
-                    <p>Espaço para uma breve apresentação do projeto, seus objetivos e público atendido.</p>
-                </article>
-                <article class="card">
-                    <p class="card-label">Projeto 03</p>
-                    <h3>Nome do projeto</h3>
-                    <p>Espaço para uma breve apresentação do projeto, seus objetivos e público atendido.</p>
-                </article>
+      <section class="hero" id="home">
+        <div class="container hero-inner">
+          <div class="hero-copy">
+            <p class="eyebrow">Extensão • Ensino • Prática Profissional</p>
+            <h1>Conhecimento que fortalece a comunidade.</h1>
+            <p class="hero-text">
+              O NEPP integra educação, extensão e formação profissional para criar
+              ações que dialogam diretamente com a realidade do território e com as
+              demandas sociais do Campus Apodi.
+            </p>
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="projetos.html">Conheça os projetos</a>
+              <a class="btn btn-secondary" href="#about">Saiba mais</a>
             </div>
-        </section>
+          </div>
 
-        <section class="content-section" id="team" aria-labelledby="team-title">
-            <h2 id="team-title">Equipe</h2>
-            <p>As informações sobre a equipe do NEPP serão incluídas aqui.</p>
-        </section>
+          <div class="hero-panel" aria-label="Resumo do Núcleo">
+            <div class="stat-box">
+              <strong>+20</strong>
+              <span>ações de extensão</span>
+            </div>
+            <div class="stat-box">
+              <strong>08</strong>
+              <span>parcerias estratégicas</span>
+            </div>
+            <div class="stat-box">
+              <strong>100%</strong>
+              <span>voltado à comunidade</span>
+            </div>
+          </div>
+        </div>
+      </section>
 
-        <section class="content-section contact-section" id="contact" aria-labelledby="contact-title">
-            <h2 id="contact-title">Contato</h2>
-            <p>Os canais oficiais de contato serão informados nesta seção.</p>
-        </section>
+      <section class="about-section" id="about">
+        <div class="container">
+          <div class="section-head">
+            <p class="eyebrow eyebrow-dark">Coordenação de Extensão</p>
+            <h2>Articulando ações de extensão no campus</h2>
+          </div>
+
+          <div class="about-grid">
+            <div class="about-card">
+              <h3>Missão</h3>
+              <p>
+                Promover a integração entre ensino, pesquisa e extensão, fortalecendo
+                a formação profissional e ampliando o impacto social das ações do campus.
+              </p>
+            </div>
+            <div class="about-card accent">
+              <h3>Objetivos</h3>
+              <p>
+                Apoiar estudantes, egressos e comunidades por meio de projetos,
+                estágios, aprendizagem e ações voltadas ao desenvolvimento local.
+              </p>
+            </div>
+            <div class="about-card">
+              <h3>Parcerias</h3>
+              <p>
+                Fortalecer redes com a sociedade civil, órgãos públicos e instituições
+                que ampliem as possibilidades de ação e inovação.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="projects-section" id="projects">
+        <div class="container">
+          <div class="section-head center">
+            <p class="eyebrow eyebrow-dark">Atividades de extensão</p>
+            <h2>Projetos e ações em destaque</h2>
+          </div>
+
+          <div class="project-grid">
+            <article class="project-card">
+              <span class="project-tag">Projeto</span>
+              <h3>Projetos de extensão</h3>
+              <p>
+                Ações com objetivos específicos, articuladas com a comunidade e com as
+                demandas locais do campus.
+              </p>
+              <a href="projetos.html">Abrir hub de projetos</a>
+            </article>
+
+            <article class="project-card">
+              <span class="project-tag">Formação</span>
+              <h3>Estágios e aprendizagens</h3>
+              <p>
+                Experiências formativas que conectam teoria e prática, contribuindo para
+                o desenvolvimento profissional dos estudantes.
+              </p>
+              <a href="projetos.html">Ver projetos</a>
+            </article>
+
+            <article class="project-card">
+              <span class="project-tag">Internacionalização</span>
+              <h3>Gestão e intercâmbio</h3>
+              <p>
+                Iniciativas que ampliam a relação acadêmica, cultural e científica com
+                instituições de outros países.
+              </p>
+              <a href="projetos.html">Ver projetos</a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="nuclei-section" id="nuclei">
+        <div class="container">
+          <div class="section-head center">
+            <p class="eyebrow eyebrow-dark">Núcleos do campus</p>
+            <h2>Estruturas que apoiam a extensão</h2>
+          </div>
+
+          <div class="nuclei-grid">
+            <article class="nucleus-card">
+              <div class="icon">NEPP</div>
+              <h3>Núcleo de Educação e Prática Profissional</h3>
+              <p>Conheça as ações e serviços do NEPP no Campus Apodi.</p>
+            </article>
+
+            <article class="nucleus-card">
+              <div class="icon">NUARTE</div>
+              <h3>Núcleo de Artes</h3>
+              <p>Acesse informações sobre as atividades artísticas do campus.</p>
+            </article>
+
+            <article class="nucleus-card">
+              <div class="icon">IFSol</div>
+              <h3>Incubadora Tecnológica</h3>
+              <p>Saiba mais sobre o fortalecimento de empreendimentos econômicos solidários.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="team-section" id="team">
+        <div class="container">
+          <div class="section-head center">
+            <p class="eyebrow eyebrow-dark">Equipe</p>
+            <h2>Quem organiza e apoia as ações</h2>
+          </div>
+
+          <div class="team-grid">
+            <article class="team-card">
+              <h3>Jackson da Cruz Costa</h3>
+              <p class="role">Coordenador</p>
+              <a href="mailto:jackson.costa@ifrn.edu.br">jackson.costa@ifrn.edu.br</a>
+            </article>
+
+            <article class="team-card">
+              <h3>Eliude Emmanuelle Pinheiro de Franca Torres</h3>
+              <p class="role">Assistente em Administração</p>
+              <a href="mailto:eliude.torres@ifrn.edu.br">eliude.torres@ifrn.edu.br</a>
+            </article>
+
+            <article class="team-card">
+              <h3>Luiza Helena Praxedes</h3>
+              <p class="role">Assessora de Relações Internacionais</p>
+              <a href="mailto:luiza.praxedes@ifrn.edu.br">luiza.praxedes@ifrn.edu.br</a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact-section" id="contact">
+        <div class="container contact-grid">
+          <div>
+            <p class="eyebrow eyebrow-dark">Contato</p>
+            <h2>Fale com a Coordenação de Extensão</h2>
+          </div>
+
+          <div class="contact-info">
+            <p><strong>E-mail:</strong> coex.ap@ifrn.edu.br</p>
+            <p><strong>WhatsApp:</strong> (84) 99812-2492</p>
+            <p><strong>Instagram:</strong> @coex.ap</p>
+            <p><strong>Endereço:</strong> Rodovia RN 233, Km 02, nº 1000, Chapada do Apodi - Apodi-RN</p>
+          </div>
+        </div>
+      </section>
     </main>
 
-    <footer>
-        <p>&copy; 2026 IFRN Campus Apodi. Todos os direitos reservados.</p>
-        <p>Desenvolvido pelos estudantes do 3º ano de Informática Integrado.</p>
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>© 2026 IFRN Campus Apodi</p>
+        <p>Todos os direitos reservados</p>
+      </div>
     </footer>
-</body>
+  </body>
 </html>
