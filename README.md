@@ -25,3 +25,34 @@ Os projetos exibidos atualmente são exemplos de apresentação. As informaçõe
 2. Execute `python -m http.server 8000`.
 3. No navegador, acesse `http://localhost:8000`.
 4. Para encerrar o servidor, volte ao terminal e pressione `Ctrl+C`.
+
+## Especificações técnicas
+
+### Tecnologias
+
+- HTML5 para as páginas e sua estrutura semântica.
+- CSS3 para estilos, layout responsivo, navegação móvel e suporte a movimento reduzido.
+- JavaScript nativo, sem framework ou dependências de instalação.
+- JSON como fonte central dos textos institucionais, objetivos e projetos.
+
+O projeto não possui etapa de compilação nem banco de dados. Como os dados são obtidos com `fetch`, o site deve ser executado por HTTP, localmente ou em uma hospedagem estática.
+
+### Organização dos arquivos
+
+- `index.html`: página inicial e seções institucionais.
+- `projetos.html`: catálogo de projetos.
+- `projeto-detalhe.html`: modelo compartilhado para exibir um projeto.
+- `data/site.json`: conteúdo do site e lista de projetos.
+- `js/site.js`: carrega o JSON e renderiza objetivos, cartões e detalhes.
+- `style.css`: estilos compartilhados e pontos de adaptação para telas menores.
+- `images/logo.jpeg`: logo do NEPP.
+
+### Dados e navegação
+
+O JSON possui um objeto `site` com conteúdo institucional e um array `projects`. Cada projeto deve ter um `id` único, além de título, área, resumo, descrição, objetivos, metodologia, responsável, período e situação. A página inicial exibe até três projetos; o catálogo exibe todos. O detalhe é selecionado pelo parâmetro `id`, por exemplo `projeto-detalhe.html?id=projeto-exemplo-1`.
+
+Os valores são inseridos no HTML como texto, sem interpretar marcação HTML vinda do JSON.
+
+### Responsividade e publicação
+
+O layout usa pontos de quebra em 820 px e 640 px; o menu compacto é ativado em telas de até 640 px. A publicação do GitHub Pages usa a branch `main`, na raiz do repositório, e o endereço público é [nepp-apodi no GitHub Pages](https://guilhemesn.github.io/nepp-apodi/).
