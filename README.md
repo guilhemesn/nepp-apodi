@@ -1,35 +1,34 @@
 # NEPP — IFRN Campus Apodi
 
-Site institucional inicial do Núcleo de Extensão e Prática Profissional do IFRN Campus Apodi. Esta versão utiliza apenas HTML e CSS, sem dependências ou etapas de compilação.
+Site institucional do Núcleo de Extensão e Prática Profissional do IFRN Campus Apodi. O projeto usa HTML e CSS estáticos, sem dependências nem etapa de compilação.
 
-## Arquivos do site
+## Estrutura do repositório
 
-- `index.html`: estrutura e conteúdo da página inicial.
-- `style.css`: estilos, cores, disposição dos elementos e regras para telas menores.
-- `logo.jpeg`: imagem exibida no cabeçalho.
+- `index.html`: página inicial, com apresentação, projetos em destaque, equipe e contato.
+- `style.css`: estilos da página inicial e ajustes responsivos.
+- `projetos.html`: catálogo demonstrativo de projetos.
+- `projeto-detalhe.html`: modelo demonstrativo para a página de um projeto.
+- `css/projetos.css`: estilos compartilhados pelas páginas de projetos.
+- `images/logo.jpeg`: logo usada no cabeçalho.
 
-Os três arquivos devem permanecer na mesma pasta, pois o HTML referencia `style.css` e `logo.jpeg` por caminhos relativos.
+Mantenha os caminhos e nomes dos arquivos, ou atualize os atributos `href` e `src` correspondentes nos arquivos HTML.
 
 ## Como visualizar
 
-1. Baixe ou clone o repositório para o computador.
-2. Abra a pasta no Visual Studio Code.
-3. Abra `index.html` no navegador. Não é necessário instalar pacotes.
+1. Clone ou baixe o repositório e abra a pasta no Visual Studio Code.
+2. Abra `index.html` no navegador. Não é necessário instalar pacotes.
 
-Para atualizar a página automaticamente enquanto edita, é possível usar a extensão **Live Server** do Visual Studio Code: clique com o botão direito em `index.html` e escolha **Open with Live Server**.
+Para recarregar a página automaticamente durante a edição, instale a extensão **Live Server**, clique com o botão direito em `index.html` e selecione **Open with Live Server**.
 
-## Como editar o conteúdo
+## Como editar o site
 
-- Abra `index.html` e altere os textos das seções Hero, Projetos, Equipe ou Contato.
-- Para cadastrar outro card, duplique um bloco `<article class="card">` dentro da seção `id="projects"` e atualize o título e a descrição.
-- O menu usa links para as seções da página. Ao renomear um `id`, atualize também o `href` correspondente no menu.
-- Para trocar a logo, substitua `logo.jpeg` por outra imagem mantendo esse nome e a mesma pasta, ou ajuste o caminho no atributo `src` em `index.html`.
-- Edite `style.css` para mudar a aparência. As regras `@media` no final do arquivo controlam o layout em telas menores.
+- Altere os textos e as seções diretamente em `index.html`.
+- Para adicionar um card de destaque, duplique um bloco `<article class="card">` na seção `id="projects"`.
+- Edite `style.css` para ajustar a página inicial. As regras `@media` controlam a apresentação em telas menores.
+- As páginas de projetos usam `css/projetos.css`; edite esse arquivo para alterar apenas o catálogo e o modelo de detalhe.
+- Para trocar a logo, substitua `images/logo.jpeg` mantendo o nome, ou altere o caminho nas páginas HTML.
+- `projetos.html` e `projeto-detalhe.html` são modelos: substitua nomes e textos de exemplo pelas informações oficiais fornecidas pelo NEPP.
 
-## Observação sobre o conteúdo
+## Publicação e acesso
 
-Os nomes e as descrições dos projetos, assim como as informações da equipe e os canais de contato, ainda são espaços reservados. Substitua-os pelos dados oficiais fornecidos e validados pelo NEPP.
-
-## Compartilhamento
-
-O repositório está configurado como privado. Para que outra pessoa possa visualizar ou editar os arquivos no GitHub, ela precisa ser adicionada como colaboradora nas configurações de acesso do repositório.
+O repositório no GitHub é privado. Convide colaboradores nas configurações de acesso do repositório para que possam visualizar ou editar os arquivos. O GitHub Pages não publica sites a partir de repositórios privados em todos os planos; para manter o acesso restrito, use o próprio repositório para compartilhar o código.
