@@ -1,0 +1,75 @@
+{
+  "site": {
+    "title": "NEPP - IFRN Campus Apodi",
+    "tagline": "Núcleo de Extensão e Prática Profissional",
+    "heroTitle": "Conhecimento que se conecta com a comunidade.",
+    "heroDescription": "Conheça o NEPP do IFRN Campus Apodi e acompanhe iniciativas que aproximam formação, extensão e prática profissional.",
+    "aboutTitle": "O que é o NEPP?",
+    "aboutText": "O Núcleo de Extensão e Prática Profissional do IFRN Campus Apodi reúne iniciativas de extensão e prática profissional. Este texto deve ser revisado com a apresentação institucional oficial do núcleo.",
+    "objectivesIntro": "Os objetivos abaixo são espaços reservados para o conteúdo institucional validado pelo NEPP.",
+    "objectives": [
+      {
+        "title": "Objetivo principal",
+        "description": "Adicione aqui o objetivo principal oficial do NEPP."
+      },
+      {
+        "title": "Como atua",
+        "description": "Descreva as atividades e formas de atuação do núcleo."
+      },
+      {
+        "title": "Impacto esperado",
+        "description": "Descreva os resultados esperados para estudantes e comunidade."
+      }
+    ],
+    "teamText": "As informações sobre a equipe do NEPP serão incluídas aqui.",
+    "contactText": "Os canais oficiais de contato serão informados nesta seção.",
+    "email": "",
+    "campus": "IFRN Campus Apodi",
+    "footerCredit": "Desenvolvido pelos estudantes do 3º ano de Informática Integrado"
+  },
+  "projects": [
+    {
+      "id": "projeto-exemplo-1",
+      "title": "Projeto de exemplo 1",
+      "area": "Área do projeto",
+      "summary": "Espaço para um resumo do projeto, seu objetivo e o público atendido.",
+      "description": "Substitua este texto pela apresentação oficial do projeto, explicando o que é, como surgiu e quais atividades realiza.",
+      "objectives": [
+        "Adicione o objetivo principal do projeto.",
+        "Adicione outros objetivos específicos, se houver."
+      ],
+      "methodology": "Descreva como o projeto desenvolve suas atividades.",
+      "responsible": "Informação a confirmar",
+      "period": "A definir",
+      "status": "Conteúdo demonstrativo"
+    },
+    {
+      "id": "projeto-exemplo-2",
+      "title": "Projeto de exemplo 2",
+      "area": "Área do projeto",
+      "summary": "Espaço para um resumo do projeto, seu objetivo e o público atendido.",
+      "description": "Substitua este texto pela apresentação oficial do projeto, explicando o que é, como surgiu e quais atividades realiza.",
+      "objectives": [
+        "Adicione o objetivo principal do projeto."
+      ],
+      "methodology": "Descreva como o projeto desenvolve suas atividades.",
+      "responsible": "Informação a confirmar",
+      "period": "A definir",
+      "status": "Conteúdo demonstrativo"
+    },
+    {
+      "id": "projeto-exemplo-3",
+      "title": "Projeto de exemplo 3",
+      "area": "Área do projeto",
+      "summary": "Espaço para um resumo do projeto, seu objetivo e o público atendido.",
+      "description": "Substitua este texto pela apresentação oficial do projeto, explicando o que é, como surgiu e quais atividades realiza.",
+      "objectives": [
+        "Adicione o objetivo principal do projeto."
+      ],
+      "methodology": "Descreva como o projeto desenvolve suas atividades.",
+      "responsible": "Informação a confirmar",
+      "period": "A definir",
+      "status": "Conteúdo demonstrativo"
+    }
+  ]
+}
