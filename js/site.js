@@ -12,9 +12,20 @@ function createTextElement(tagName, className, value) {
   return element;
 }
 
-function createProjectCard(project) {
+function shuffleProjects(projects) {
+  const shuffled = [...projects];
+
+  for (let index = shuffled.length - 1; index > 0; index -= 1) {
+    const randomIndex = Math.floor(Math.random() * (index + 1));
+    [shuffled[index], shuffled[randomIndex]] = [shuffled[randomIndex], shuffled[index]];
+  }
+
+  return shuffled;
+}
+
+function createProjectCard(project, isCarouselSlide = false) {
   const card = document.createElement("article");
-  card.className = "project-card";
+  card.className = isCarouselSlide ? "project-card swiper-slide" : "project-card";
   card.append(
     createTextElement("p", "project-card__area", project.area),
     createTextElement("h3", "project-card__title", project.title),
@@ -30,17 +41,83 @@ function createProjectCard(project) {
 
 function renderProjects(projects) {
   document.querySelectorAll("[data-project-grid]").forEach((grid) => {
-    const limit = Number(grid.dataset.featuredLimit);
-    const visibleProjects = Number.isFinite(limit) && limit > 0
-      ? projects.slice(0, limit)
-      : projects;
+    const isFeaturedCarousel = Boolean(grid.closest("[data-project-carousel]"));
+    const projectsToRender = isFeaturedCarousel ? shuffleProjects(projects) : projects;
 
-    if (visibleProjects.length === 0) {
+    if (projectsToRender.length === 0) {
       grid.append(createTextElement("p", "empty-state", "Os projetos serão publicados aqui em breve."));
       return;
     }
 
-    visibleProjects.forEach((project) => grid.append(createProjectCard(project)));
+    projectsToRender.forEach((project) => grid.append(createProjectCard(project, isFeaturedCarousel)));
+  });
+}
+
+function initializeProjectCarousel(projects) {
+  const carousel = document.querySelector("[data-project-carousel]");
+  if (!carousel) return;
+
+  const swiperElement = carousel.querySelector(".project-swiper");
+  const previousButton = carousel.querySelector("[data-carousel-previous]");
+  const nextButton = carousel.querySelector("[data-carousel-next]");
+  const controls = carousel.querySelector(".project-carousel__controls");
+  if (projects.length < 2) {
+    controls.hidden = true;
+    return;
+  }
+
+  if (typeof window.Swiper !== "function") {
+    carousel.classList.add("project-carousel--fallback");
+    controls.hidden = true;
+    return;
+  }
+
+  const maximumVisibleSlides = Math.max(1, projects.length - 1);
+  const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+  const swiper = new window.Swiper(swiperElement, {
+    slidesPerView: 1,
+    slidesPerGroup: 1,
+    spaceBetween: 12,
+    speed: 600,
+    loop: true,
+    grabCursor: true,
+    watchOverflow: true,
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+      pauseOnMouseEnter: false,
+      stopOnLastSlide: false
+    },
+    navigation: {
+      prevEl: previousButton,
+      nextEl: nextButton
+    },
+    keyboard: {
+      enabled: true,
+      onlyInViewport: true
+    },
+    a11y: {
+      containerMessage: "Projetos em destaque",
+      containerRoleDescriptionMessage: "carrossel",
+      prevSlideMessage: "Projeto anterior",
+      nextSlideMessage: "Próximo projeto"
+    },
+    breakpoints: {
+      641: {
+        slidesPerView: Math.min(2, maximumVisibleSlides),
+        spaceBetween: 18
+      },
+      821: {
+        slidesPerView: Math.min(3, maximumVisibleSlides),
+        spaceBetween: 18
+      }
+    }
+  });
+
+  if (reducedMotion.matches) swiper.autoplay.stop();
+  reducedMotion.addEventListener("change", (event) => {
+    if (event.matches) swiper.autoplay.stop();
+    else swiper.autoplay.start();
   });
 }
 
@@ -150,13 +227,14 @@ async function initializeSite() {
   configureNavigation();
 
   try {
-    const response = await fetch(dataPath);
+    const response = await fetch(dataPath, { cache: "no-cache" });
     if (!response.ok) throw new Error(`Falha ao carregar dados: ${response.status}`);
     const data = await response.json();
 
     renderSite(data.site);
     renderProjects(data.projects);
     renderProjectDetail(data.projects);
+    initializeProjectCarousel(data.projects);
   } catch (error) {
     const errorMessage = document.querySelector("[data-load-error]");
     if (errorMessage) errorMessage.hidden = false;

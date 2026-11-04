@@ -32,10 +32,10 @@ Os projetos exibidos atualmente são exemplos de apresentação. As informaçõe
 
 - HTML5 para as páginas e sua estrutura semântica.
 - CSS3 para estilos, layout responsivo, navegação móvel e suporte a movimento reduzido.
-- JavaScript nativo, sem framework ou dependências de instalação.
+- JavaScript nativo para carregar os dados e inicializar o Swiper.js v12, usado no carrossel de projetos.
 - JSON como fonte central dos textos institucionais, objetivos e projetos.
 
-O projeto não possui etapa de compilação nem banco de dados. Como os dados são obtidos com `fetch`, o site deve ser executado por HTTP, localmente ou em uma hospedagem estática.
+O projeto não possui etapa de compilação nem banco de dados. Os dados são carregados com `fetch`, e o Swiper é obtido pelo CDN jsDelivr; a conexão com a internet é necessária para o carrossel interativo. Se o CDN estiver indisponível, os projetos continuam visíveis em uma grade estática.
 
 ### Organização dos arquivos
 
@@ -43,13 +43,13 @@ O projeto não possui etapa de compilação nem banco de dados. Como os dados s�
 - `projetos.html`: catálogo de projetos.
 - `projeto-detalhe.html`: modelo compartilhado para exibir um projeto.
 - `data/site.json`: conteúdo do site e lista de projetos.
-- `js/site.js`: carrega o JSON e renderiza objetivos, cartões e detalhes.
+- `js/site.js`: carrega o JSON, renderiza objetivos e projetos e inicializa o Swiper.
 - `style.css`: estilos compartilhados e pontos de adaptação para telas menores.
 - `images/logo.jpeg`: logo do NEPP.
 
 ### Dados e navegação
 
-O JSON possui um objeto `site` com conteúdo institucional e um array `projects`. Cada projeto deve ter um `id` único, além de título, área, resumo, descrição, objetivos, metodologia, responsável, período e situação. A página inicial exibe até três projetos; o catálogo exibe todos. O detalhe é selecionado pelo parâmetro `id`, por exemplo `projeto-detalhe.html?id=projeto-exemplo-1`.
+O JSON possui um objeto `site` com conteúdo institucional e um array `projects`. Cada projeto deve ter um `id` único, além de título, área, resumo, descrição, objetivos, metodologia, responsável, período e situação. O destaque embaralha os projetos e o Swiper percorre a lista em loop, com autoplay de 3 segundos, navegação e gestos de toque; exibe até três slides em desktop, dois em tablet e um em celular. O catálogo exibe todos. O detalhe é selecionado pelo parâmetro `id`, por exemplo `projeto-detalhe.html?id=projeto-exemplo-1`.
 
 Os valores são inseridos no HTML como texto, sem interpretar marcação HTML vinda do JSON.
 

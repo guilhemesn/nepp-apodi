@@ -70,6 +70,36 @@
       "responsible": "Informação a confirmar",
       "period": "A definir",
       "status": "Conteúdo demonstrativo"
+    },
+    {
+      "id": "projeto-exemplo-4",
+      "title": "Projeto de exemplo 4: Horta educativa",
+      "area": "Sustentabilidade",
+      "summary": "Exemplo de iniciativa educativa sobre cultivo e sustentabilidade.",
+      "description": "Este conteúdo é demonstrativo e deve ser substituído pela apresentação oficial do projeto, caso exista uma iniciativa com esta proposta.",
+      "objectives": [
+        "Apresentar práticas de cultivo sustentável.",
+        "Promover atividades educativas com a comunidade."
+      ],
+      "methodology": "Exemplo de atividades práticas, oficinas e acompanhamento do cultivo.",
+      "responsible": "Informação a confirmar",
+      "period": "A definir",
+      "status": "Conteúdo demonstrativo"
+    },
+    {
+      "id": "projeto-exemplo-5",
+      "title": "Projeto de exemplo 5: Oficina de tecnologia",
+      "area": "Tecnologia e formação",
+      "summary": "Exemplo de oficina para compartilhar conhecimentos de tecnologia.",
+      "description": "Este conteúdo é demonstrativo e deve ser substituído pela apresentação oficial do projeto, caso exista uma iniciativa com esta proposta.",
+      "objectives": [
+        "Compartilhar conhecimentos introdutórios de tecnologia.",
+        "Incentivar a aprendizagem prática e colaborativa."
+      ],
+      "methodology": "Exemplo de encontros práticos e atividades guiadas para os participantes.",
+      "responsible": "Informação a confirmar",
+      "period": "A definir",
+      "status": "Conteúdo demonstrativo"
     }
   ]
 }
