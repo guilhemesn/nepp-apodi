@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/style.css">
   <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js" defer></script>
   <script src="js/site.js" defer></script>
 </head>
@@ -19,7 +19,7 @@
   <header class="site-header">
     <div class="container header-inner">
       <a class="brand" href="index.html" aria-label="NEPP, página inicial">
-        <img src="images/logo.jpeg" alt="Logo NEPP IFRN Apodi" width="60" height="60">
+        <img src="images/logo.jpeg" alt="Logo NEPP IFRN Apodi" width="1600" height="533">
         <span><strong>NEPP</strong><small>IFRN · Campus Apodi</small></span>
       </a>
       <button class="menu-toggle" type="button" aria-label="Abrir menu principal" aria-expanded="false" aria-controls="main-nav">
@@ -39,11 +39,16 @@
       <div class="container hero-inner">
         <div class="hero-copy">
           <p class="eyebrow" data-site-tagline>Núcleo de Extensão e Prática Profissional</p>
-          <h1 id="hero-title" data-hero-title>Conhecimento que se conecta com a comunidade.</h1>
-          <p class="hero-text" data-hero-description>Conheça o NEPP do IFRN Campus Apodi e acompanhe iniciativas que aproximam formação, extensão e prática profissional.</p>
-          <a class="button button-primary" href="projetos.html">Conheça os projetos <span aria-hidden="true">→</span></a>
+          <h1 id="hero-title" data-hero-title>Extensão e prática profissional em Apodi.</h1>
+          <p class="hero-text" data-hero-description>Estudantes e servidores do IFRN trabalham com agricultores, escolas e empreendedores da região. Conheça os projetos do NEPP e entre em contato com a equipe.</p>
+          <a class="button button-primary" href="pages/projetos.html">Ver projetos <span aria-hidden="true">→</span></a>
         </div>
-        <div class="hero-mark" aria-hidden="true"><span>NEPP</span><span>APODI</span></div>
+        <aside class="hero-projects" aria-label="Alguns projetos de 2026">
+          <p class="hero-projects__heading">No NEPP em 2026</p>
+          <a href="pages/projeto-detalhe.html?id=jovem-extensionista"><span>Agropecuária</span><strong>Jovem extensionista</strong><small>Vivência dos estudantes na agricultura familiar.</small></a>
+          <a href="pages/projeto-detalhe.html?id=saneantes-agricultura-familiar"><span>Química</span><strong>Saneantes de baixo custo</strong><small>Produção e uso de produtos de limpeza no campo.</small></a>
+          <a href="pages/projeto-detalhe.html?id=gastronomia-territorio-inovacao"><span>Agropecuária</span><strong>Gastronomia no Alto Oeste</strong><small>Oficinas e consultorias para o setor de alimentação.</small></a>
+        </aside>
       </div>
     </section>
 
@@ -53,25 +58,50 @@
           <p class="eyebrow">Sobre o núcleo</p>
           <h2 class="section-title" id="about-title" data-about-title>O que é o NEPP?</h2>
         </div>
-        <p class="body-copy" data-about-text></p>
+        <p class="body-copy" data-about-text>O NEPP do IFRN Campus Apodi reúne estudantes e servidores em projetos e serviços para a comunidade. As atividades fazem parte da formação profissional dos alunos e atendem demandas locais nas áreas de Agropecuária, Química e Informática.</p>
       </div>
-    </section>
-
-    <section class="section section-muted" aria-labelledby="objectives-title">
-      <div class="container">
-        <div class="section-heading">
-          <div><p class="eyebrow">Nosso propósito</p><h2 class="section-title" id="objectives-title">Objetivos do NEPP</h2></div>
-          <p class="section-intro" data-objectives-intro></p>
-        </div>
-        <div class="info-grid" data-objectives></div>
+      <div class="container nepp-process" aria-labelledby="process-title">
+        <h3 id="process-title">O que fazemos</h3>
+        <p class="process-intro">As etapas de funcionamento do núcleo serão apresentadas aqui.</p>
+        <ol class="process-timeline" role="list">
+          <li>
+            <span class="process-timeline__marker" aria-hidden="true">1</span>
+            <h4>Etapa 1</h4>
+            <p>Descrição da etapa a definir.</p>
+          </li>
+          <li>
+            <span class="process-timeline__marker" aria-hidden="true">2</span>
+            <h4>Etapa 2</h4>
+            <p>Descrição da etapa a definir.</p>
+          </li>
+          <li>
+            <span class="process-timeline__marker" aria-hidden="true">3</span>
+            <h4>Etapa 3</h4>
+            <p>Descrição da etapa a definir.</p>
+          </li>
+          <li>
+            <span class="process-timeline__marker" aria-hidden="true">4</span>
+            <h4>Etapa 4</h4>
+            <p>Descrição da etapa a definir.</p>
+          </li>
+          <li>
+            <span class="process-timeline__marker" aria-hidden="true">5</span>
+            <h4>Etapa 5</h4>
+            <p>Descrição da etapa a definir.</p>
+          </li>
+        </ol>
+      </div>
+      <div class="container expertise-strip" aria-label="Áreas de atuação">
+        <span>Áreas de atuação</span>
+        <ul><li>Agropecuária</li><li>Química</li><li>Informática</li></ul>
       </div>
     </section>
 
     <section class="section" id="projetos" aria-labelledby="projects-title">
       <div class="container">
         <div class="section-heading">
-          <div><p class="eyebrow">Iniciativas</p><h2 class="section-title" id="projects-title">Projetos em destaque</h2></div>
-          <a class="text-link" href="projetos.html">Ver todos os projetos <span aria-hidden="true">→</span></a>
+          <div><h2 class="section-title" id="projects-title">Projetos de 2026</h2></div>
+          <a class="text-link" href="pages/projetos.html">Ver todos os projetos <span aria-hidden="true">→</span></a>
         </div>
         <div class="project-carousel" data-project-carousel role="region" aria-roledescription="carrossel" aria-label="Projetos em destaque">
           <div class="swiper project-swiper">
@@ -85,10 +115,14 @@
       </div>
     </section>
 
-    <section class="section section-muted" id="equipe" aria-labelledby="team-title">
-      <div class="container simple-section">
-        <div><p class="eyebrow">Pessoas</p><h2 class="section-title" id="team-title">Equipe</h2></div>
-        <p class="body-copy" data-team-text></p>
+    <section class="section team-section" id="equipe" aria-labelledby="team-title">
+      <div class="container">
+        <div class="section-heading team-heading">
+          <div><h2 class="section-title" id="team-title">Conheça nossa equipe</h2></div>
+          <p class="section-intro">Conheça os integrantes do núcleo e os projetos em que atuam.</p>
+        </div>
+        <div class="team-grid" data-team-grid></div>
+        <div class="team-contact"><p>Para dúvidas sobre projetos ou propostas de parceria:</p><a class="text-link" href="#contato">Entre em contato <span aria-hidden="true">→</span></a></div>
       </div>
     </section>
 
@@ -106,6 +140,6 @@
       <p>© <span data-current-year></span> IFRN Campus Apodi. <span data-footer-credit></span>.</p>
     </div>
   </footer>
-  <p class="load-error" data-load-error role="alert" hidden>Não foi possível carregar os dados do site. Abra a pasta com um servidor local, como o Live Server.</p>
+  <p class="load-error" data-load-error role="alert" hidden>Não foi possível carregar as informações. Atualize a página ou tente novamente mais tarde.</p>
 </body>
 </html>

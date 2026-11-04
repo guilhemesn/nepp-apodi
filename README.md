@@ -6,7 +6,7 @@ O site do Núcleo de Extensão e Prática Profissional do IFRN Campus Apodi apre
 
 Visite [nepp-apodi no GitHub Pages](https://guilhemesn.github.io/nepp-apodi/). Na página inicial, conheça o NEPP e use o menu para navegar pelas seções. A área **Projetos** reúne as iniciativas; selecione **Conheça o projeto** para ver a apresentação, os objetivos e outras informações disponíveis.
 
-Os projetos exibidos atualmente são exemplos de apresentação. As informações oficiais serão incluídas quando forem fornecidas pelo NEPP.
+O catálogo reúne seis projetos com vínculo confirmado ao NEPP-AP, a partir do portal do IFRN, documentos oficiais e dados do SUAP fornecidos pelo responsável pelo site. Os quatro projetos de 2026 aparecem nos destaques; os registros de 2025 e 2015–2016 permanecem no catálogo. Consulte [as fontes e pendências](data/FONTES.md).
 
 ## Executar no computador
 
@@ -40,16 +40,20 @@ O projeto não possui etapa de compilação nem banco de dados. Os dados são ca
 ### Organização dos arquivos
 
 - `index.html`: página inicial e seções institucionais.
-- `projetos.html`: catálogo de projetos.
-- `projeto-detalhe.html`: modelo compartilhado para exibir um projeto.
+- `pages/projetos.html`: catálogo de projetos.
+- `pages/projeto-detalhe.html`: modelo compartilhado para exibir um projeto.
 - `data/site.json`: conteúdo do site e lista de projetos.
 - `js/site.js`: carrega o JSON, renderiza objetivos e projetos e inicializa o Swiper.
-- `style.css`: estilos compartilhados e pontos de adaptação para telas menores.
+- `css/style.css`: estilos compartilhados e pontos de adaptação para telas menores.
 - `images/logo.jpeg`: logo do NEPP.
 
 ### Dados e navegação
 
-O JSON possui um objeto `site` com conteúdo institucional e um array `projects`. Cada projeto deve ter um `id` único, além de título, área, resumo, descrição, objetivos, metodologia, responsável, período e situação. O destaque embaralha os projetos e o Swiper percorre a lista em loop, com autoplay de 3 segundos, navegação e gestos de toque; exibe até três slides em desktop, dois em tablet e um em celular. O catálogo exibe todos. O detalhe é selecionado pelo parâmetro `id`, por exemplo `projeto-detalhe.html?id=projeto-exemplo-1`.
+As classificações dos projetos usam `areas`, uma lista com uma ou mais opções entre `Informática`, `Química` e `Agropecuária`. A interface apresenta as áreas em estilo neutro. O carregamento valida essas opções e rejeita áreas vazias, repetidas ou fora da lista.
+
+O JSON possui um objeto `site` com conteúdo institucional e um array `projects`. Cada projeto tem um `id` único, título, áreas, resumo, descrição, objetivos, metodologia, coordenação (`responsible`), período e situação. Campos sem informação são ocultados na interface. A documentação das fontes e pendências fica em `data/FONTES.md`; as páginas apresentam apenas conteúdo voltado ao visitante.
+
+O destaque embaralha apenas os projetos com `featured: true`. O Swiper percorre a lista em loop, com autoplay de 3 segundos, navegação e gestos de toque; exibe até três slides em desktop, dois em tablet e um em celular. O mouse sobre um card interrompe o autoplay; ao sair, ele retoma, respeitando a preferência por movimento reduzido. O catálogo exibe todos os registros. O detalhe é selecionado pelo parâmetro `id`, por exemplo `pages/projeto-detalhe.html?id=jovem-extensionista`.
 
 Os valores são inseridos no HTML como texto, sem interpretar marcação HTML vinda do JSON.
 

@@ -2,104 +2,152 @@
   "site": {
     "title": "NEPP - IFRN Campus Apodi",
     "tagline": "Núcleo de Extensão e Prática Profissional",
-    "heroTitle": "Conhecimento que se conecta com a comunidade.",
-    "heroDescription": "Conheça o NEPP do IFRN Campus Apodi e acompanhe iniciativas que aproximam formação, extensão e prática profissional.",
+    "heroTitle": "Extensão e prática profissional em Apodi.",
+    "heroDescription": "Estudantes e servidores do IFRN trabalham com agricultores, escolas e empreendedores da região. Conheça os projetos do NEPP e entre em contato com a equipe.",
     "aboutTitle": "O que é o NEPP?",
-    "aboutText": "O Núcleo de Extensão e Prática Profissional do IFRN Campus Apodi reúne iniciativas de extensão e prática profissional. Este texto deve ser revisado com a apresentação institucional oficial do núcleo.",
-    "objectivesIntro": "Os objetivos abaixo são espaços reservados para o conteúdo institucional validado pelo NEPP.",
-    "objectives": [
-      {
-        "title": "Objetivo principal",
-        "description": "Adicione aqui o objetivo principal oficial do NEPP."
-      },
-      {
-        "title": "Como atua",
-        "description": "Descreva as atividades e formas de atuação do núcleo."
-      },
-      {
-        "title": "Impacto esperado",
-        "description": "Descreva os resultados esperados para estudantes e comunidade."
-      }
-    ],
-    "teamText": "As informações sobre a equipe do NEPP serão incluídas aqui.",
-    "contactText": "Os canais oficiais de contato serão informados nesta seção.",
+    "aboutText": "O NEPP do IFRN Campus Apodi reúne estudantes e servidores em projetos e serviços para a comunidade. As atividades fazem parte da formação profissional dos alunos e atendem demandas locais nas áreas de Agropecuária, Química e Informática.",
+    "contactText": "Nome do canal de comunicação a definir.",
     "email": "",
     "campus": "IFRN Campus Apodi",
-    "footerCredit": "Desenvolvido pelos estudantes do 3º ano de Informática Integrado"
+    "footerCredit": "Desenvolvido por Guilherme Silva de Noronha, Davi Mateus dos Santos Rodrigues e Kaled Werner Marinho Sizenando",
+    "team": [
+      {
+        "name": "Hilton Felipe Marinho Barreto",
+        "role": "Coordenador do NEPP",
+        "description": "Descrição do integrante a definir.",
+        "area": "Agropecuária e extensão rural"
+      },
+      {
+        "name": "Tassio Lessa do Nascimento",
+        "role": "Membro do NEPP",
+        "description": "Descrição do integrante a definir.",
+        "area": "Química e agricultura familiar"
+      },
+      {
+        "name": "Jackson da Cruz Costa",
+        "role": "Membro do NEPP",
+        "description": "Descrição do integrante a definir.",
+        "area": "Extensão e integração comunitária"
+      }
+    ]
   },
   "projects": [
     {
-      "id": "projeto-exemplo-1",
-      "title": "Projeto de exemplo 1",
-      "area": "Área do projeto",
-      "summary": "Espaço para um resumo do projeto, seu objetivo e o público atendido.",
-      "description": "Substitua este texto pela apresentação oficial do projeto, explicando o que é, como surgiu e quais atividades realiza.",
+      "id": "gastronomia-territorio-inovacao",
+      "title": "Gastronomia, Território e Inovação: ações extensionistas para o fortalecimento do setor de alimentação no Alto Oeste Potiguar",
+      "summary": "Oficinas, consultorias e visitas técnicas para quem trabalha com alimentação em Apodi e no Alto Oeste.",
+      "description": "O projeto atende demandas do Núcleo Gastronômico de Apodi (NUGAP), com capacitações e consultorias para empreendedores e trabalhadores do setor de alimentação. A programação inclui apoio técnico aos concursos do XVIII Festival Gastronômico e Cultural de Martins e cozinhas show e degustações de carnes caprinas na Festa do Bode, em Mossoró.",
       "objectives": [
-        "Adicione o objetivo principal do projeto.",
-        "Adicione outros objetivos específicos, se houver."
+        "Capacitar empreendedores e trabalhadores do setor de alimentação.",
+        "Promover inovação nos serviços e uso de ferramentas de gestão.",
+        "Valorizar os produtos e saberes gastronômicos regionais."
       ],
-      "methodology": "Descreva como o projeto desenvolve suas atividades.",
-      "responsible": "Informação a confirmar",
-      "period": "A definir",
-      "status": "Conteúdo demonstrativo"
+      "methodology": "Capacitações, consultorias, oficinas, visitas técnicas e participação em eventos gastronômicos, com envolvimento de estudantes e atendimento às demandas apresentadas pelo NUGAP.",
+      "period": "01/07/2026 a 20/12/2026",
+      "status": "Em execução",
+      "responsible": "",
+      "featured": true,
+      "cardTitle": "Gastronomia, Território e Inovação",
+      "areas": [
+        "Agropecuária"
+      ]
     },
     {
-      "id": "projeto-exemplo-2",
-      "title": "Projeto de exemplo 2",
-      "area": "Área do projeto",
-      "summary": "Espaço para um resumo do projeto, seu objetivo e o público atendido.",
-      "description": "Substitua este texto pela apresentação oficial do projeto, explicando o que é, como surgiu e quais atividades realiza.",
+      "id": "agroecologia-inclusao-digital",
+      "title": "Agroecologia, Inclusão Digital e Desenvolvimento Territorial no Sertão do Apodi: Formação de Lideranças em Gestão Social do Desenvolvimento Territorial",
+      "summary": "Estudantes de Agroecologia e Informática desenvolvem ferramentas de gestão e comunicação para comunidades rurais.",
+      "description": "O projeto reúne estudantes de Agroecologia e Informática em oficinas e visitas a comunidades rurais. As atividades incluem soluções digitais para a agricultura familiar e ferramentas de gestão e comunicação comunitária, junto a ações de formação em agroecologia.",
       "objectives": [
-        "Adicione o objetivo principal do projeto."
+        "Promover práticas agroecológicas associadas a tecnologias digitais.",
+        "Fortalecer a inclusão digital e a inovação social em comunidades rurais.",
+        "Ampliar competências técnicas, sociais e cidadãs dos estudantes."
       ],
-      "methodology": "Descreva como o projeto desenvolve suas atividades.",
-      "responsible": "Informação a confirmar",
-      "period": "A definir",
-      "status": "Conteúdo demonstrativo"
+      "methodology": "Oficinas, visitas técnicas, desenvolvimento de soluções digitais para a agricultura familiar e criação de ferramentas de gestão e comunicação comunitária, além de ações formativas sobre sustentabilidade.",
+      "period": "01/03/2026 a 31/12/2026",
+      "status": "Em execução",
+      "responsible": "",
+      "featured": true,
+      "cardTitle": "Agroecologia e inclusão digital no Sertão do Apodi",
+      "areas": [
+        "Agropecuária",
+        "Informática"
+      ]
     },
     {
-      "id": "projeto-exemplo-3",
-      "title": "Projeto de exemplo 3",
-      "area": "Área do projeto",
-      "summary": "Espaço para um resumo do projeto, seu objetivo e o público atendido.",
-      "description": "Substitua este texto pela apresentação oficial do projeto, explicando o que é, como surgiu e quais atividades realiza.",
+      "id": "jovem-extensionista",
+      "title": "Jovem extensionista",
+      "summary": "Vivências na Fazenda Escola e em instituições de assistência técnica para estudantes de Agropecuária.",
+      "description": "O Jovem extensionista prevê a seleção e capacitação de doze estudantes de Agropecuária. Eles participam de residências técnicas de quinze dias em instituições de assistência técnica e extensão rural e de atividades na Fazenda Escola. O projeto também prevê uma horta comunitária em creche e capacitações em agroecologia e crédito rural.",
       "objectives": [
-        "Adicione o objetivo principal do projeto."
+        "Articular teoria e prática profissional na formação em Agropecuária.",
+        "Valorizar os saberes locais e a realidade da agricultura familiar.",
+        "Desenvolver competências de comunicação e gestão dos estudantes."
       ],
-      "methodology": "Descreva como o projeto desenvolve suas atividades.",
-      "responsible": "Informação a confirmar",
-      "period": "A definir",
-      "status": "Conteúdo demonstrativo"
+      "methodology": "Seleção e capacitação de doze estudantes, rodízio com residência técnica de quinze dias em instituições parceiras de ATER e imersões nos setores produtivos da Fazenda Escola.",
+      "period": "18/05/2026 a 18/12/2026",
+      "status": "Em execução",
+      "responsible": "Hilton Felipe Marinho Barreto",
+      "featured": true,
+      "cardTitle": "Jovem extensionista",
+      "areas": [
+        "Agropecuária"
+      ]
     },
     {
-      "id": "projeto-exemplo-4",
-      "title": "Projeto de exemplo 4: Horta educativa",
-      "area": "Sustentabilidade",
-      "summary": "Exemplo de iniciativa educativa sobre cultivo e sustentabilidade.",
-      "description": "Este conteúdo é demonstrativo e deve ser substituído pela apresentação oficial do projeto, caso exista uma iniciativa com esta proposta.",
+      "id": "saneantes-agricultura-familiar",
+      "title": "Produção e Aplicação de Saneantes de Baixo Custo para Agricultura Familiar no Município de Apodi/RN",
+      "summary": "Produção de detergentes, desinfetantes e sanitizantes, com orientação de uso para agricultores de Apodi.",
+      "description": "Estudantes de Química participam do desenvolvimento de saneantes de baixo custo para agricultores familiares de Apodi. Além da produção, o projeto prevê capacitação sobre o uso seguro dos produtos. A proposta é reduzir os custos de limpeza e melhorar as condições sanitárias da produção agrícola.",
       "objectives": [
-        "Apresentar práticas de cultivo sustentável.",
-        "Promover atividades educativas com a comunidade."
+        "Desenvolver saneantes de baixo custo para agricultores familiares.",
+        "Capacitar agricultores para o uso seguro e eficiente dos produtos.",
+        "Aproximar a formação prática em Química das demandas locais."
       ],
-      "methodology": "Exemplo de atividades práticas, oficinas e acompanhamento do cultivo.",
-      "responsible": "Informação a confirmar",
-      "period": "A definir",
-      "status": "Conteúdo demonstrativo"
+      "methodology": "Produção de desinfetantes, detergentes e sanitizantes, acompanhada de capacitação dos agricultores para utilização segura e eficiente.",
+      "period": "18/05/2026 a 18/12/2026",
+      "status": "Em execução",
+      "responsible": "Tassio Lessa do Nascimento",
+      "featured": true,
+      "cardTitle": "Saneantes de baixo custo para a agricultura familiar",
+      "areas": [
+        "Química"
+      ]
     },
     {
-      "id": "projeto-exemplo-5",
-      "title": "Projeto de exemplo 5: Oficina de tecnologia",
-      "area": "Tecnologia e formação",
-      "summary": "Exemplo de oficina para compartilhar conhecimentos de tecnologia.",
-      "description": "Este conteúdo é demonstrativo e deve ser substituído pela apresentação oficial do projeto, caso exista uma iniciativa com esta proposta.",
+      "id": "agro-em-acao-2025",
+      "title": "Agro em Ação: IFRN nas comunidades",
+      "summary": "Participação de estudantes de Agropecuária em ações de extensão do NEPP-AP junto às comunidades.",
+      "description": "O projeto Agro em Ação: IFRN nas comunidades integra as iniciativas do NEPP-AP e envolve estudantes bolsistas e voluntários do curso de Agropecuária do Campus Apodi.",
+      "objectives": [],
+      "methodology": "",
+      "period": "2025",
+      "status": "",
+      "responsible": "",
+      "featured": false,
+      "cardTitle": "Agro em Ação: IFRN nas comunidades",
+      "areas": [
+        "Agropecuária"
+      ]
+    },
+    {
+      "id": "alimentacao-saudavel-pnae",
+      "title": "Promoção de alimentação e hábitos de vida saudáveis na implementação do programa nacional de alimentação escolar (PNAE) em escolas públicas de Apodi e região",
+      "summary": "Hortas orgânicas e atividades de educação alimentar no campus e em escolas públicas da região.",
+      "description": "O projeto foi proposto para o Campus Apodi e escolas públicas de educação infantil da região, com hortas orgânicas, palestras e atividades sobre alimentação. A programação inclui capacitação para o manejo das hortas e teatro educativo nas escolas.",
       "objectives": [
-        "Compartilhar conhecimentos introdutórios de tecnologia.",
-        "Incentivar a aprendizagem prática e colaborativa."
+        "Promover educação nutricional e hábitos de vida saudáveis.",
+        "Implantar hortas orgânicas em apoio à alimentação escolar.",
+        "Capacitar participantes para implantação e manejo das hortas."
       ],
-      "methodology": "Exemplo de encontros práticos e atividades guiadas para os participantes.",
-      "responsible": "Informação a confirmar",
-      "period": "A definir",
-      "status": "Conteúdo demonstrativo"
+      "methodology": "Duas etapas: atividades internas no Campus Apodi, com horta, palestras e atividades físicas; e ações externas em escolas de educação infantil, com teatro educativo e construção de hortas para a merenda escolar.",
+      "period": "04/05/2015 a 18/11/2016",
+      "status": "",
+      "responsible": "",
+      "featured": false,
+      "cardTitle": "Hortas e alimentação saudável nas escolas",
+      "areas": [
+        "Agropecuária"
+      ]
     }
   ]
 }

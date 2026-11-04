@@ -1,4 +1,5 @@
-const dataPath = new URL("data/site.json", document.baseURI);
+const siteRoot = new URL("../", document.currentScript.src);
+const dataPath = new URL("data/site.json", siteRoot);
 
 function setText(selector, value) {
   const element = document.querySelector(selector);
@@ -27,13 +28,14 @@ function createProjectCard(project, isCarouselSlide = false) {
   const card = document.createElement("article");
   card.className = isCarouselSlide ? "project-card swiper-slide" : "project-card";
   card.append(
-    createTextElement("p", "project-card__area", project.area),
-    createTextElement("h3", "project-card__title", project.title),
+    createTextElement("p", "project-card__area", project.areas.join(" · ")),
+    createTextElement("h3", "project-card__title", project.cardTitle || project.title),
+    createTextElement("p", "project-card__period", project.period),
     createTextElement("p", "project-card__summary", project.summary)
   );
 
-  const link = createTextElement("a", "text-link", "Conheça o projeto →");
-  link.href = `projeto-detalhe.html?id=${encodeURIComponent(project.id)}`;
+  const link = createTextElement("a", "text-link", "Ver projeto →");
+  link.href = new URL(`pages/projeto-detalhe.html?id=${encodeURIComponent(project.id)}`, siteRoot).href;
   link.setAttribute("aria-label", `Conheça o projeto ${project.title}`);
   card.append(link);
   return card;
@@ -42,7 +44,7 @@ function createProjectCard(project, isCarouselSlide = false) {
 function renderProjects(projects) {
   document.querySelectorAll("[data-project-grid]").forEach((grid) => {
     const isFeaturedCarousel = Boolean(grid.closest("[data-project-carousel]"));
-    const projectsToRender = isFeaturedCarousel ? shuffleProjects(projects) : projects;
+    const projectsToRender = isFeaturedCarousel ? shuffleProjects(projects.filter((project) => project.featured)) : projects;
 
     if (projectsToRender.length === 0) {
       grid.append(createTextElement("p", "empty-state", "Os projetos serão publicados aqui em breve."));
@@ -53,7 +55,7 @@ function renderProjects(projects) {
   });
 }
 
-function initializeProjectCarousel(projects) {
+function initializeProjectCarousel() {
   const carousel = document.querySelector("[data-project-carousel]");
   if (!carousel) return;
 
@@ -61,7 +63,7 @@ function initializeProjectCarousel(projects) {
   const previousButton = carousel.querySelector("[data-carousel-previous]");
   const nextButton = carousel.querySelector("[data-carousel-next]");
   const controls = carousel.querySelector(".project-carousel__controls");
-  if (projects.length < 2) {
+  if (swiperElement.querySelectorAll(".project-card").length < 2) {
     controls.hidden = true;
     return;
   }
@@ -72,7 +74,7 @@ function initializeProjectCarousel(projects) {
     return;
   }
 
-  const maximumVisibleSlides = Math.max(1, projects.length - 1);
+  const maximumVisibleSlides = Math.max(1, swiperElement.querySelectorAll(".project-card").length - 1);
   const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
   const swiper = new window.Swiper(swiperElement, {
     slidesPerView: 1,
@@ -121,27 +123,18 @@ function initializeProjectCarousel(projects) {
     }
   });
 
-  if (reducedMotion.matches) swiper.autoplay.stop();
-  reducedMotion.addEventListener("change", (event) => {
-    if (event.matches) swiper.autoplay.stop();
-    else swiper.autoplay.start();
-  });
-}
+  const updateAutoplay = () => {
+    const hoveredCard = swiperElement.querySelector(".project-card:hover");
+    if (reducedMotion.matches || hoveredCard) swiper.autoplay.stop();
+    else if (!swiper.autoplay.running) swiper.autoplay.start();
+  };
 
-function renderObjectives(objectives) {
-  const grid = document.querySelector("[data-objectives]");
-  if (!grid) return;
-
-  objectives.forEach((objective, index) => {
-    const card = document.createElement("article");
-    card.className = "info-card";
-    card.append(
-      createTextElement("span", "info-card__number", String(index + 1).padStart(2, "0")),
-      createTextElement("h3", "info-card__title", objective.title),
-      createTextElement("p", "info-card__description", objective.description)
-    );
-    grid.append(card);
+  swiperElement.querySelectorAll(".project-card").forEach((card) => {
+    card.addEventListener("mouseenter", updateAutoplay);
+    card.addEventListener("mouseleave", updateAutoplay);
   });
+  reducedMotion.addEventListener("change", updateAutoplay);
+  updateAutoplay();
 }
 
 function renderProjectDetail(projects) {
@@ -154,25 +147,49 @@ function renderProjectDetail(projects) {
     const heading = createTextElement("h1", "section-title", "Projeto não encontrado");
     const message = createTextElement("p", "body-copy", "Confira o catálogo e escolha um projeto disponível.");
     const link = createTextElement("a", "button button-primary", "Ver projetos");
-    link.href = "projetos.html";
+    link.href = new URL("pages/projetos.html", siteRoot).href;
     detail.replaceChildren(heading, message, link);
     document.title = "Projeto não encontrado | NEPP Apodi";
     return;
   }
 
   document.title = `${project.title} | NEPP Apodi`;
-  setText("[data-project-area]", project.area);
+  document.querySelector('meta[name="description"]').content = project.summary;
+  setText("[data-project-area]", project.areas.join(" · "));
   setText("[data-project-title]", project.title);
   setText("[data-project-summary]", project.summary);
   setText("[data-project-description]", project.description);
   setText("[data-project-methodology]", project.methodology);
   setText("[data-project-responsible]", project.responsible);
+  detail.querySelector("[data-project-responsible]").closest("p").hidden = !project.responsible;
   setText("[data-project-period]", project.period);
   setText("[data-project-status]", project.status);
+  detail.querySelector("[data-project-status]").closest("p").hidden = !project.status;
+  detail.querySelector("[data-project-methodology]").closest("section").hidden = !project.methodology;
 
   const objectives = detail.querySelector("[data-project-objectives]");
+  objectives.closest("section").hidden = !project.objectives.length;
   project.objectives.forEach((objective) => {
     objectives.append(createTextElement("li", "", objective));
+  });
+}
+
+function renderTeam(members) {
+  const grid = document.querySelector("[data-team-grid]");
+  if (!grid) return;
+
+  members.forEach((member) => {
+    const card = createTextElement("article", "team-card", "");
+    const avatar = createTextElement("div", "team-card__avatar team-card__photo-placeholder", "");
+    avatar.setAttribute("aria-hidden", "true");
+    card.append(
+      avatar,
+      createTextElement("p", "team-card__role", member.role),
+      createTextElement("h3", "team-card__name", member.name),
+      createTextElement("p", "team-card__description", member.description),
+      createTextElement("span", "team-card__area", member.area)
+    );
+    grid.append(card);
   });
 }
 
@@ -213,8 +230,7 @@ function renderSite(site) {
   setText("[data-hero-description]", site.heroDescription);
   setText("[data-about-title]", site.aboutTitle);
   setText("[data-about-text]", site.aboutText);
-  setText("[data-objectives-intro]", site.objectivesIntro);
-  setText("[data-team-text]", site.teamText);
+  renderTeam(site.team);
   setText("[data-contact-text]", site.contactText);
   setText("[data-campus]", site.campus);
   setText("[data-current-year]", new Date().getFullYear());
@@ -227,7 +243,25 @@ function renderSite(site) {
     emailLink.hidden = false;
   }
 
-  renderObjectives(site.objectives);
+}
+
+async function alignInitialSection() {
+  const initialHash = window.location.hash;
+  if (!initialHash) return;
+  const section = document.getElementById(initialHash.slice(1));
+  if (!section) return;
+
+  const pageLoaded = document.readyState === "complete"
+    ? Promise.resolve()
+    : new Promise((resolve) => window.addEventListener("load", resolve, { once: true }));
+  await Promise.all([pageLoaded, document.fonts.ready]);
+
+  if (window.location.hash !== initialHash) return;
+  const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  requestAnimationFrame(() => section.scrollIntoView({
+    behavior: reducedMotion ? "instant" : "smooth",
+    block: "start"
+  }));
 }
 
 async function initializeSite() {
@@ -237,11 +271,23 @@ async function initializeSite() {
     const response = await fetch(dataPath, { cache: "no-cache" });
     if (!response.ok) throw new Error(`Falha ao carregar dados: ${response.status}`);
     const data = await response.json();
+    if (!data.site || !Array.isArray(data.projects)) {
+      throw new Error("Estrutura dos dados do site inválida.");
+    }
+    const allowedAreas = new Set(["Informática", "Química", "Agropecuária"]);
+    const projectIds = new Set();
+    data.projects.forEach((project) => {
+      if (!project.id || !project.title || !Array.isArray(project.objectives) || !Array.isArray(project.areas) || !project.areas.length || project.areas.some((area) => !allowedAreas.has(area)) || new Set(project.areas).size !== project.areas.length || projectIds.has(project.id)) {
+        throw new Error("Projeto inválido ou identificador duplicado.");
+      }
+      projectIds.add(project.id);
+    });
 
     renderSite(data.site);
     renderProjects(data.projects);
     renderProjectDetail(data.projects);
-    initializeProjectCarousel(data.projects);
+    initializeProjectCarousel();
+    alignInitialSection();
   } catch (error) {
     const errorMessage = document.querySelector("[data-load-error]");
     if (errorMessage) errorMessage.hidden = false;
