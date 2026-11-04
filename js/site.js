@@ -81,6 +81,13 @@ function initializeProjectCarousel(projects) {
     speed: 600,
     loop: true,
     grabCursor: true,
+    allowTouchMove: true,
+    simulateTouch: true,
+    touchEventsTarget: "container",
+    touchAngle: 45,
+    touchRatio: 1,
+    threshold: 5,
+    touchStartPreventDefault: false,
     watchOverflow: true,
     autoplay: {
       delay: 3000,
