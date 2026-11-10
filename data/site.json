@@ -1,13 +1,13 @@
 {
   "site": {
-    "title": "NEPP - IFRN Campus Apodi",
+    "title": "NEPP-AP CONECTA | IFRN Campus Apodi",
     "tagline": "Núcleo de Extensão e Prática Profissional",
-    "heroTitle": "Extensão e prática profissional em Apodi.",
-    "heroDescription": "Estudantes e servidores do IFRN trabalham com agricultores, escolas e empreendedores da região. Conheça os projetos do NEPP e entre em contato com a equipe.",
-    "aboutTitle": "O que é o NEPP?",
-    "aboutText": "O NEPP do IFRN Campus Apodi reúne estudantes e servidores em projetos e serviços para a comunidade. As atividades fazem parte da formação profissional dos alunos e atendem demandas locais nas áreas de Agropecuária, Química e Informática.",
-    "contactText": "Nome do canal de comunicação a definir.",
-    "email": "",
+    "heroTitle": "Do campus para toda a região.",
+    "heroDescription": "Conheça os projetos do NEPP e entre em contato com a equipe.",
+    "aboutTitle": "NEPP-AP CONECTA",
+    "aboutText": "CONECTA é o Núcleo de Extensão e Prática Profissional do IFRN Campus Apodi, que reúne estudantes e servidores em projetos e serviços para a comunidade. As atividades fazem parte da formação profissional dos alunos e atendem demandas locais nas áreas de Agropecuária, Química e Informática.",
+    "contactText": "Envie sua demanda para o NEPP-AP CONECTA. Conte o que você ou sua organização precisa e a equipe analisará como pode atender.",
+    "email": "nepp.ap@ifrn.edu.br",
     "campus": "IFRN Campus Apodi",
     "footerCredit": "Desenvolvido por Guilherme Silva de Noronha, Davi Mateus dos Santos Rodrigues e Kaled Werner Marinho Sizenando",
     "team": [
@@ -29,7 +29,8 @@
         "description": "Descrição do integrante a definir.",
         "area": "Extensão e integração comunitária"
       }
-    ]
+    ],
+    "heroTitleAccent": "para toda a região."
   },
   "projects": [
     {
@@ -48,9 +49,9 @@
       "responsible": "",
       "featured": true,
       "cardTitle": "Gastronomia, Território e Inovação",
-      "areas": [
-        "Agropecuária"
-      ]
+      "areas": ["Agropecuária"],
+      "axes": ["agropecuaria-alimentos-sustentabilidade"],
+      "years": [2026]
     },
     {
       "id": "agroecologia-inclusao-digital",
@@ -68,10 +69,12 @@
       "responsible": "",
       "featured": true,
       "cardTitle": "Agroecologia e inclusão digital no Sertão do Apodi",
-      "areas": [
-        "Agropecuária",
-        "Informática"
-      ]
+      "areas": ["Agropecuária", "Informática"],
+      "axes": [
+        "agropecuaria-alimentos-sustentabilidade",
+        "tecnologia-inovacao"
+      ],
+      "years": [2026]
     },
     {
       "id": "jovem-extensionista",
@@ -89,9 +92,12 @@
       "responsible": "Hilton Felipe Marinho Barreto",
       "featured": true,
       "cardTitle": "Jovem extensionista",
-      "areas": [
-        "Agropecuária"
-      ]
+      "areas": ["Agropecuária"],
+      "axes": [
+        "agropecuaria-alimentos-sustentabilidade",
+        "educacao-formacao-profissional"
+      ],
+      "years": [2026]
     },
     {
       "id": "saneantes-agricultura-familiar",
@@ -109,9 +115,9 @@
       "responsible": "Tassio Lessa do Nascimento",
       "featured": true,
       "cardTitle": "Saneantes de baixo custo para a agricultura familiar",
-      "areas": [
-        "Química"
-      ]
+      "areas": ["Química"],
+      "axes": ["agropecuaria-alimentos-sustentabilidade"],
+      "years": [2026]
     },
     {
       "id": "agro-em-acao-2025",
@@ -125,9 +131,9 @@
       "responsible": "",
       "featured": false,
       "cardTitle": "Agro em Ação: IFRN nas comunidades",
-      "areas": [
-        "Agropecuária"
-      ]
+      "areas": ["Agropecuária"],
+      "axes": ["agropecuaria-alimentos-sustentabilidade"],
+      "years": [2025]
     },
     {
       "id": "alimentacao-saudavel-pnae",
@@ -145,8 +151,105 @@
       "responsible": "",
       "featured": false,
       "cardTitle": "Hortas e alimentação saudável nas escolas",
-      "areas": [
-        "Agropecuária"
+      "areas": ["Agropecuária"],
+      "axes": [
+        "agropecuaria-alimentos-sustentabilidade",
+        "educacao-formacao-profissional"
+      ],
+      "years": [2015, 2016]
+    }
+  ],
+  "axes": [
+    {
+      "id": "agropecuaria-alimentos-sustentabilidade",
+      "number": 1,
+      "title": "Agropecuária, Alimentos e Sustentabilidade",
+      "summary": "Agricultura familiar, produção de alimentos e soluções para o desenvolvimento rural.",
+      "description": "Agricultura familiar, extensão rural, produção agropecuária, agroecologia, análises de solo, processamento e qualidade de alimentos, gastronomia, tecnologias sociais, sustentabilidade e turismo rural.",
+      "courses": [
+        "Técnico em Agropecuária",
+        "Técnico em Química",
+        "Licenciatura em Química",
+        "Engenharia Agronômica (prevista)"
+      ],
+      "solutions": [
+        {
+          "title": "Serviços técnicos",
+          "text": "Análises de solo, avaliação de processos produtivos e análises físico-químicas de alimentos, conforme a capacidade instalada."
+        },
+        {
+          "title": "Consultoria e assessoria",
+          "text": "Produção agropecuária, agricultura familiar, agroecologia, manejo sustentável, processamento de alimentos e gastronomia."
+        },
+        {
+          "title": "Capacitações",
+          "text": "Práticas agrícolas, tecnologias sociais, produção de alimentos, boas práticas de manipulação e aproveitamento de recursos locais."
+        },
+        {
+          "title": "Outras soluções",
+          "text": "Apoio à extensão rural, ao turismo rural e ao desenvolvimento de produtos e processos sustentáveis."
+        }
+      ]
+    },
+    {
+      "id": "tecnologia-inovacao",
+      "number": 2,
+      "title": "Tecnologia e Inovação",
+      "summary": "Informática, sistemas, sites e suporte tecnológico para organizações e comunidades.",
+      "description": "Informática, manutenção e suporte, redes, desenvolvimento de sistemas e sites, automação, transformação digital, cultura digital, robótica, tecnologia educacional e soluções tecnológicas para organizações e comunidades.",
+      "courses": [
+        "Técnico em Informática",
+        "Técnico em Manutenção e Suporte em Informática"
+      ],
+      "solutions": [
+        {
+          "title": "Serviços técnicos",
+          "text": "Manutenção e suporte em informática, instalação e configuração de sistemas, redes e infraestrutura digital."
+        },
+        {
+          "title": "Consultoria e desenvolvimento",
+          "text": "Criação de sites, sistemas e ferramentas digitais, automação de processos e transformação digital de organizações."
+        },
+        {
+          "title": "Capacitações",
+          "text": "Informática básica, ferramentas digitais, programação, robótica, cultura digital e tecnologias educacionais."
+        },
+        {
+          "title": "Outras soluções",
+          "text": "Inclusão digital, prototipagem e aplicação de tecnologias para resolver problemas de instituições, empreendimentos e comunidades."
+        }
+      ]
+    },
+    {
+      "id": "educacao-formacao-profissional",
+      "number": 3,
+      "title": "Educação e Formação Profissional",
+      "summary": "Cursos, oficinas e ações educativas para estudantes, educadores e profissionais.",
+      "description": "Formação inicial e continuada, capacitação de educadores e profissionais, oficinas educativas, metodologias de ensino, produção de materiais didáticos, divulgação científica, educação inclusiva, educação digital e desenvolvimento de competências profissionais.",
+      "courses": [
+        "Licenciatura em Química",
+        "Técnico em Agropecuária",
+        "Técnico em Química",
+        "Técnico em Informática",
+        "Técnico em Manutenção e Suporte em Informática"
+      ],
+      "solutions": [
+        {
+          "title": "Serviços e assessoria",
+          "text": "Apoio a ações educativas, projetos culturais, preservação do patrimônio, memória e valorização da identidade territorial."
+        },
+        {
+          "title": "Consultoria e desenvolvimento",
+          "text": "Elaboração de projetos educativos e culturais, estratégias de divulgação científica, comunicação e valorização de iniciativas locais."
+        },
+        {
+          "title": "Capacitações",
+          "text": "Formação de educadores, oficinas temáticas, popularização da ciência, educação patrimonial e desenvolvimento de competências."
+        },
+        {
+          "title": "Outras soluções",
+          "text": "Apoio a iniciativas de turismo cultural, desenvolvimento comunitário e fortalecimento de organizações e coletivos locais."
+        }
       ]
     }
   ]
